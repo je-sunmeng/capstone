@@ -2,11 +2,18 @@
 
 var os = require('os');
 var nodeStatic = require('node-static');
-var http = require('http');
+var https = require('https');
+var fs = require('fs');
 var socketIO = require('socket.io');
 
+var options = {
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+};
+
+
 var fileServer = new(nodeStatic.Server)();
-var app = http.createServer(function(req, res) {
+var app = https.createServer(options, function(req, res) {
   fileServer.serve(req, res);
 }).listen(3000);
 
