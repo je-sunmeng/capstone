@@ -16,18 +16,24 @@ var pcConfig = {
 
 // Set up audio and video regardless of what devices are present.
 var sdpConstraints = {
-  offerToReceiveAudio: true,
+  offerToReceiveAudio: false,
   offerToReceiveVideo: true
 };
 
 const hdConstraints = {
+  audio: true,
+  // video: {
+  //   width: {
+  //     min: 1920
+  //   },
+  //   height: {
+  //     min: 1080
+  //   }
+  // }
   video: {
-    width: {
-      min: 1920
-    },
-    height: {
-      min: 1080
-    }
+    width: { ideal: 1920 },
+    height: { ideal: 1080 },
+    aspectRatio: 16 / 9
   }
 };
 
