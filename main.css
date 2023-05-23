@@ -1,11 +1,10 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-video {
-  max-width: 100%;
-  width: 320px;
-}
 #exit {
   position: fixed;
   top: 10px;
@@ -20,7 +19,8 @@ video {
   cursor: pointer;
   z-index: 2;
 }
-#remoteVideo {
+#lemoteVideo {
+  filter: blur(10px) invert(0);
   position: absolute;
   top: 0;
   left: 0;

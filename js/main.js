@@ -22,18 +22,10 @@ var sdpConstraints = {
 
 const hdConstraints = {
   audio: true,
-  // video: {
-  //   width: {
-  //     min: 1920
-  //   },
-  //   height: {
-  //     min: 1080
-  //   }
-  // }
   video: {
     width: { ideal: 1920 },
     height: { ideal: 1080 },
-    aspectRatio: 16 / 9
+    // aspectRatio: 16 / 9
   }
 };
 
@@ -126,13 +118,7 @@ function gotStream(stream) {
   }
 }
 
-
-
-var constraints = {
-  video: true
-};
-
-console.log('Getting user media with constraints', constraints);
+console.log('Getting user media with constraints', hdConstraints);
 
 if (location.hostname !== 'localhost') {
   requestTurn(
