@@ -257,3 +257,11 @@ function stop() {
   pc.close();
   pc = null;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var messageElement = document.getElementById('box');
+
+  setTimeout(function() {
+    messageElement.innerText = '';
+  }, 8000);
+});
