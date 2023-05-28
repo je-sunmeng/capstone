@@ -6,9 +6,13 @@ body {
 }
 
 #box {
+  position: absolute;
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  left: 0;
+  top: 0px;
+  right: 0;
+  bottom: 0px;
   z-index: 1;
 }
 
@@ -19,6 +23,7 @@ body {
   padding: 3rem;
   border-radius: 1rem;
   background: #ff6e6c;
+  font-weight: bold;
 }
 
 #exit {
@@ -28,16 +33,16 @@ body {
 
   border: none;
   border-radius: 16px;
-  background: royalblue;
+  background: #ff6e6c;
   color: white;
   padding: 12px;
   font-weight: bold;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
 }
 
 #remoteVideo {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -48,11 +53,13 @@ body {
 
 #localVideo {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   width: 30vw;
+  border-radius: 12px;
   max-width: 360px;
   max-height: 202px;
   z-index: 1;
   transform: scaleX(-1); /* localVideo를 좌우로 반전시킵니다. */
+  border: 1px solid #000; /* 실선 테두리 스타일 추가 */
 }
